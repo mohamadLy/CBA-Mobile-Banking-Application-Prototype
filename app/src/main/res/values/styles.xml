@@ -17,4 +17,15 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="GreySeparatorLine">
+        <item name="android:background">@color/grey_separator_line</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+    </style>
+
+    <style name="log_in_editText">
+        <item name="android:textColor">@color/editText_textColor</item>
+        <item name="android:textColorHint">@color/editText_textColorHint</item>
+    </style>
+
 </resources>
