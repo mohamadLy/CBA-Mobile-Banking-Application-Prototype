@@ -7,146 +7,183 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="4dp"
-        android:contentDescription="@string/cbalogo"
-        app:srcCompat="@mipmap/ic_launcher" />
-
-    <LinearLayout
-        android:id="@+id/fieldContainer"
-        android:layout_width="match_parent"
+    <!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/log_in_left_margin"
-        android:layout_marginRight="@dimen/log_in_right_margin"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/log_in_layout_padding">
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/txtError"
-            android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/login_form">
+        <ImageView
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:paddingLeft="@dimen/log_in_layout_padding"
-            android:paddingRight="@dimen/log_in_layout_padding"
-            android:visibility="gone"/>
+            android:layout_weight="1"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/cbalogo"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:id="@+id/cbaLogo"/>
 
         <LinearLayout
+            android:id="@+id/fieldContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginLeft="@dimen/log_in_left_margin"
+            android:layout_marginRight="@dimen/log_in_right_margin"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/log_in_layout_padding"
+            android:layout_below="@+id/cbaLogo">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal"
-                android:paddingLeft="@dimen/log_in_layout_padding"
-                android:paddingRight="@dimen/log_in_layout_padding">
-
-                <EditText
-                    android:id="@+id/usernameEditText"
-                    style="@style/log_in_editText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="center_vertical"
-                    android:backgroundTint="@android:color/transparent"
-                    android:hint="@string/log_in_client_card_or_username"
-                    android:maxLines="1"
-                    android:inputType="text"
-                    android:nextFocusDown="@+id/passwordEditText"
-                    android:nextFocusRight="@+id/storedCardButton" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/dropdown_arrow" />
-            </LinearLayout>
-
-            <View style="@style/GreySeparatorLine" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="14dp"
-                android:paddingTop="@dimen/log_in_layout_padding"
-                android:paddingLeft="@dimen/log_in_layout_padding"
-                android:paddingRight="@dimen/log_in_layout_padding">
-
-                <EditText
-                    android:id="@+id/passwordEditText"
-                    style="@style/log_in_editText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="center_vertical"
-                    android:backgroundTint="@android:color/transparent"
-                    android:hint="@string/log_in_password"
-                    android:maxLines="1"
-                    android:inputType="textPassword"
-                    android:nextFocusDown="@+id/rememberMeCheckbox"
-                    android:nextFocusUp="@+id/usernameEditText" />
-            </LinearLayout>
-
-            <View style="@style/GreySeparatorLine" />
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/txtError"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:paddingTop="@dimen/log_in_layout_padding"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
                 android:paddingLeft="@dimen/log_in_layout_padding"
-                android:paddingRight="@dimen/log_in_layout_padding">
+                android:paddingRight="@dimen/log_in_layout_padding"
+                android:visibility="gone"/>
 
-                <TextView
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/log_in_layout_padding"
+                    android:paddingRight="@dimen/log_in_layout_padding">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/email"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true"
+                            style="@style/log_in_editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/log_in_client_card_or_username"
+                            android:maxLines="1"
+                            android:nextFocusDown="@+id/passwordEditText"
+                            android:nextFocusRight="@+id/storedCardButton"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/dropdown_arrow" />
+                </LinearLayout>
+
+                <View style="@style/GreySeparatorLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="14dp"
+                    android:paddingTop="@dimen/log_in_layout_padding"
+                    android:paddingLeft="@dimen/log_in_layout_padding"
+                    android:paddingRight="@dimen/log_in_layout_padding">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:imeActionId="6"
+                            android:imeActionLabel="@string/action_sign_in_short"
+                            android:imeOptions="actionUnspecified"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:id="@+id/passwordEditText"
+                            style="@style/log_in_editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/log_in_password"
+                            android:nextFocusDown="@+id/rememberMeCheckbox"
+                            android:nextFocusUp="@+id/usernameEditText" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <View style="@style/GreySeparatorLine" />
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginRight="12dp"
-                    android:text="Remember Me"
-                    android:textColor="@color/editText_textColor" />
+                    android:layout_gravity="right"
+                    android:paddingTop="@dimen/log_in_layout_padding"
+                    android:paddingLeft="@dimen/log_in_layout_padding"
+                    android:paddingRight="@dimen/log_in_layout_padding">
 
-                <CheckBox
-                    android:id="@+id/rememberMeCheckbox"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:nextFocusDown="@+id/signInButton"
-                    android:nextFocusUp="@+id/passwordEditText" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="12dp"
+                        android:text="Remember Me"
+                        android:textColor="@color/editText_textColor" />
+
+                    <CheckBox
+                        android:id="@+id/rememberMeCheckbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:nextFocusDown="@+id/signInButton"
+                        android:nextFocusUp="@+id/passwordEditText" />
+                </LinearLayout>
             </LinearLayout>
+
+            <Button
+                android:id="@+id/signInButton"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nextFocusUp="@+id/rememberMeSwitch"
+                android:text="SIGN IN" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="?android:attr/fingerprintAuthDrawable" />
+
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="Forgot Password"
+                android:textAllCaps="false"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:layout_gravity="center"/>
         </LinearLayout>
+    </RelativeLayout>
 
-        <Button
-            android:id="@+id/signInButton"
-            android:layout_marginTop="14dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:nextFocusUp="@+id/rememberMeSwitch"
-            android:text="SIGN IN" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="10dp"
-            app:srcCompat="?android:attr/fingerprintAuthDrawable" />
-
-
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:text="Forgot Password"
-            android:textAllCaps="false"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:layout_gravity="center"/>
-    </LinearLayout>
 </LinearLayout>
