@@ -38,8 +38,12 @@
         <activity
             android:name=".Activities.SettingsActivity"
             android:label="@string/title_activity_settings" />
-        <activity android:name=".Activities.Bills" />
-        <activity android:name=".Activities.EDeposit"></activity>
+        <activity android:name=".Activities.Bills"
+            android:label="Bill Payment"/>
+        <activity android:name=".Activities.EDeposit"
+            android:label="eDeposit">
+
+        </activity>
     </application>
 
 </manifest>
