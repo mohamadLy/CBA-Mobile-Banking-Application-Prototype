@@ -12,14 +12,15 @@
         android:layout_height="wrap_content"
         android:text="Account "
         android:textSize="25dp"
-        />
+        android:paddingLeft="10dp"/>
     <TextView
         android:text="32"
         android:layout_toRightOf="@+id/account_type"
         android:id="@+id/account_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25dp"/>
+        android:textSize="25dp"
+        android:paddingLeft="10dp"/>
     <TextView
         android:text="32"
         android:layout_below="@+id/account_type"
@@ -27,7 +28,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="25dp"
-        android:layout_margin="10px"/>
+        android:layout_margin="10px"
+        android:paddingLeft="10dp"/>
 
 
 </RelativeLayout>

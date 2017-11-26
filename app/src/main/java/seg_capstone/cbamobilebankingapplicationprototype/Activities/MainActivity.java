@@ -14,6 +14,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import seg_capstone.cbamobilebankingapplicationprototype.bills.Bill;
 import seg_capstone.cbamobilebankingapplicationprototype.dataProvider.AccountProvider;
 import seg_capstone.cbamobilebankingapplicationprototype.R;
 import seg_capstone.cbamobilebankingapplicationprototype.account.Account;
@@ -88,9 +89,10 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        Intent intent;
         if (id == R.id.nav_bill_payments) {
-            // Handle the camera action
+            intent = new Intent(this, Bills.class);
+            startActivity(intent);
         } else if (id == R.id.nav_cba_website) {
 
         } else if (id == R.id.nav_eDeposit) {
