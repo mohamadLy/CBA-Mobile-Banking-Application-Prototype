@@ -28,11 +28,11 @@ public class DataProvider {
         Account account3 = new Account("Investment", 11144112, 1500);
         accounts.add(account3);
         // #4
-     //   Account credit = new Account("Credit", 1188222, 1500);
-       // accounts.add(credit);
+        Account credit = new Account("Credit", 1188222, 1500);
+        accounts.add(credit);
         // #4
-        //Account mortgage = new Account("Mortgage", 1771222, 112000);
-        //accounts.add(mortgage);
+        Account mortgage = new Account("Mortgage", 1771222, 112000);
+        accounts.add(mortgage);
     }
 
     public ArrayList<Account> getAccounts() {

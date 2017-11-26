@@ -54,8 +54,8 @@ public class AccountAdapter extends ArrayAdapter<Account> {
         // Populate the data from the data object via the viewHolder object
         // into the template view.
         viewHolder.accountNumbber.setText(String.valueOf(account.getAccountNumber()));
-        viewHolder.balance.setText(String.valueOf(account.getBalance()));
-        viewHolder.type.setText(account.getType());
+        viewHolder.balance.setText("$" + String.valueOf(account.getBalance()));
+        viewHolder.type.setText(account.getType() + "  ");
         return convertView;
     }
 }
