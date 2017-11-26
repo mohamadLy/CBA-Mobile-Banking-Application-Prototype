@@ -28,9 +28,9 @@
         <item
             android:id="@+id/nav_global_money_tranfer"
             android:icon="@drawable/ic_trending_up_black_24dp"
-            android:title="Global Money Transfer" />    </group>
-
-    <item tools:ignore="MenuTitle">
+            android:title="Global Money Transfer" />
+    </group>
+    <group>
         <menu>
             <item
                 android:id="@+id/nav_explore_product"
@@ -41,6 +41,7 @@
                 android:icon="@drawable/ic_apps_black_24dp"
                 android:title="CBA website" />
         </menu>
-    </item>
+    </group>
+
 
 </menu>
