@@ -1,4 +1,4 @@
-package seg_capstone.cbamobilebankingapplicationprototype;
+package seg_capstone.cbamobilebankingapplicationprototype.dataProvider;
 
 import android.media.audiofx.AcousticEchoCanceler;
 
@@ -10,10 +10,10 @@ import seg_capstone.cbamobilebankingapplicationprototype.account.Account;
  * Created by mohamadou on 2017-11-24.
  */
 
-public class DataProvider {
+public class AccountProvider {
     ArrayList<Account> accounts;
 
-    public DataProvider() {
+    public AccountProvider() {
         accounts = new ArrayList<>();
     }
 

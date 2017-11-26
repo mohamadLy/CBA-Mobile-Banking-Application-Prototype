@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import seg_capstone.cbamobilebankingapplicationprototype.R;
 
-public class bills extends AppCompatActivity {
+public class Bills extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

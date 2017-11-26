@@ -38,7 +38,7 @@
         <activity
             android:name=".Activities.SettingsActivity"
             android:label="@string/title_activity_settings" />
-        <activity android:name=".Activities.bills"></activity>
+        <activity android:name=".Activities.Bills"></activity>
     </application>
 
 </manifest>
