@@ -1,70 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.seg4105.cbabankingapp.HomeActivity">
+    android:layout_height="match_parent">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <RelativeLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/dashboardBackground"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                app:srcCompat="@android:color/holo_blue_light" />
+                android:layout_height="175dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background" />
 
-            <ImageButton
-                android:id="@+id/imageButton1"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="42dp"
-                app:srcCompat="@mipmap/ic_launcher_round" />
+                android:layout_margin="20dp"
+                android:layout_gravity="center_horizontal|top"
+                android:text="WELCOME"
+                android:textSize="30sp" />
 
-            <ImageButton
-                android:id="@+id/imageButton2"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                app:srcCompat="@mipmap/ic_launcher_round" />
+                android:layout_gravity="left|bottom"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/imageButton3"
+                <ImageButton
+                    android:id="@+id/paymentsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_add_shopping_cart_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payments" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignTop="@+id/imageButton1"
-                app:srcCompat="@mipmap/ic_launcher_round" />
+                android:layout_gravity="center_horizontal|bottom"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
 
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/transferFundsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_menu_send" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trandfer Funds" />
+            </LinearLayout>
 
 
-            </ListView>
-        </RelativeLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button"
+                <ImageButton
+                    android:id="@+id/statementsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_event_note_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Statements" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageView"
-            android:text="Button" />
+            android:textSize="20sp"
+            android:text="Accounts Overview"
+            android:gravity="center"
+            android:padding="15dp"/>
+            <ListView
+                android:id="@+id/accountOverviewList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Recent Trasactions"
+            android:gravity="center"
+            android:padding="15dp"/>
+        <ListView
+            android:id="@+id/recentTransactionsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+
+    </LinearLayout>
 
 
-    </ScrollView>
-</LinearLayout>
+</ScrollView>

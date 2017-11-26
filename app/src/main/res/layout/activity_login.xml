@@ -16,20 +16,21 @@
         android:layout_marginBottom="8dp"
         android:visibility="gone" />
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:id="@+id/login_form">
+
         <ImageView
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
+            android:id="@+id/cbaLogo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_weight="1"
-            android:layout_marginTop="4dp"
             android:contentDescription="@string/cbalogo"
-            app:srcCompat="@mipmap/ic_launcher"
-            android:id="@+id/cbaLogo"/>
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <LinearLayout
             android:id="@+id/fieldContainer"
@@ -40,16 +41,6 @@
             android:orientation="vertical"
             android:paddingBottom="@dimen/log_in_layout_padding"
             android:layout_below="@+id/cbaLogo">
-
-            <TextView
-                android:id="@+id/txtError"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:paddingLeft="@dimen/log_in_layout_padding"
-                android:paddingRight="@dimen/log_in_layout_padding"
-                android:visibility="gone"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -66,7 +57,8 @@
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
 
                         <AutoCompleteTextView
                             android:id="@+id/email"
@@ -75,7 +67,6 @@
                             style="@style/log_in_editText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_gravity="center_vertical"
                             android:backgroundTint="@android:color/transparent"
                             android:hint="@string/log_in_client_card_or_username"
@@ -184,6 +175,6 @@
                 android:paddingRight="8dp"
                 android:layout_gravity="center"/>
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>
