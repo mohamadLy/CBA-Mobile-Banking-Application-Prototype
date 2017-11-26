@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         toolbar.setLogo(R.drawable.cbc_logo);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -96,6 +98,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_cba_website) {
 
         } else if (id == R.id.nav_eDeposit) {
+            intent = new Intent(this, EDeposit.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_explore_product) {
 
