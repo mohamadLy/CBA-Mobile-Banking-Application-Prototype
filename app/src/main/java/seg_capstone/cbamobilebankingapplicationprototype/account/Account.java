@@ -6,12 +6,12 @@ package seg_capstone.cbamobilebankingapplicationprototype.account;
 
 public class Account {
     private String type;
-    private double accountNumber;
-    private double balance;
+    private String accountNumber;
+    private String balance;
 
     public Account() {}
 
-    public Account(String type, double accountNumber, double balance) {
+    public Account(String type, String accountNumber, String balance) {
         this.type = type;
         this.accountNumber = accountNumber;
         this.balance = balance;
@@ -25,19 +25,19 @@ public class Account {
         this.type = type;
     }
 
-    public double getAccountNumber() {
+    public String getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(double accountNumber) {
+    public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
 
-    public double getBalance() {
+    public String getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    public void setBalance(String balance) {
         this.balance = balance;
     }
 }

@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20px"
+    android:layout_margin="20dp">
 
     <TextView
         android:id="@+id/account_type"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Account "
+        android:textSize="25dp"
+        />
     <TextView
+        android:text="32"
+        android:layout_toRightOf="@+id/account_type"
         android:id="@+id/account_number"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="25dp"/>
     <TextView
+        android:text="32"
+        android:layout_below="@+id/account_type"
         android:id="@+id/account_balance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_margin="10px"/>
 
 
-</LinearLayout>
+</RelativeLayout>
