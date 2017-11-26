@@ -12,8 +12,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
+import java.util.ArrayList;
+
+import seg_capstone.cbamobilebankingapplicationprototype.DataProvider;
 import seg_capstone.cbamobilebankingapplicationprototype.R;
+import seg_capstone.cbamobilebankingapplicationprototype.account.Account;
 import seg_capstone.cbamobilebankingapplicationprototype.adapters.AccountAdapter;
 
 public class MainActivity extends AppCompatActivity
@@ -35,7 +41,13 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        AccountAdapter accountAdapter = new AccountAdapter(this, R.layout.account_item_list);
+        ListView listView = (ListView) findViewById(R.id.content);
+        DataProvider dataProvider = new DataProvider();
+        dataProvider.feedData();
+        ArrayList<Account> accounts = dataProvider.getAccounts();
+        //AccountAdapter accountAdapter = new AccountAdapter(this, accounts);
+        AccountAdapter accountAdapter = new AccountAdapter(this, accounts);
+        listView.setAdapter(accountAdapter);
     }
 
     @Override
