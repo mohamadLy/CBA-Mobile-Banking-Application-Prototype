@@ -106,7 +106,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_my_account) {
 
         } else if (id == R.id.nav_interact_e_transfer) {
-
+            intent = new Intent(this, InteractTransfer.class);
+            startActivity(intent);
         } else if (id == R.id.nav_upcoming_transaction) {
 
         }

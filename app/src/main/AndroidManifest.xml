@@ -44,7 +44,7 @@
         <activity
             android:name=".Activities.EDeposit"
             android:label="eDeposit"></activity>
-        <activity android:name=".InteractTransfer"></activity>
+        <activity android:name=".Activities.InteractTransfer"></activity>
     </application>
 
 </manifest>
