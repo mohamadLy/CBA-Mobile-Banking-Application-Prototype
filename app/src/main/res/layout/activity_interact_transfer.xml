@@ -69,6 +69,7 @@
 
                </LinearLayout>
 
+               <!-- Status tab -->
                <LinearLayout
                    android:id="@+id/tab2"
                    android:layout_width="match_parent"
@@ -76,10 +77,36 @@
                    android:background="#da8200"
                    android:orientation="vertical">
 
-                   <TextView
+                   <RelativeLayout
                        android:layout_width="match_parent"
-                       android:layout_height="match_parent"
-                       android:text="This is tab 2" />
+                       android:layout_height="wrap_content">
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="View: Recent eTransfer"
+                           android:gravity="center_vertical"
+                           android:paddingTop="10dp"
+                           android:id="@+id/recentETransfer"/>
+                       <ImageButton
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:src="@drawable/ic_arrow_forward_black_24dp"
+                           android:layout_alignParentRight="true" />
+                   </RelativeLayout>
+                   <!-- As a divider -->
+                   <View
+                       android:paddingTop="10dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="3dp"
+                       android:background="@color/colorPrimaryDark" />
+
+                   <ListView
+                       android:id="@+id/lv_interact1"
+                       android:layout_width="match_parent"
+                       android:layout_height="0dp"
+                       android:layout_weight="1">
+                   </ListView>
+
                </LinearLayout>
 
            </FrameLayout>
