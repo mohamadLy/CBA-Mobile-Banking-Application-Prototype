@@ -29,7 +29,6 @@ public class InteractTransfer extends AppCompatActivity {
         provider.feed();
         InteractTransferAdapter adapter = new InteractTransferAdapter(this, provider.getTransfers());
         listView.setAdapter(adapter);
-
         host.addTab(spec);
 
         //Tab 2

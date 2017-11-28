@@ -58,19 +58,15 @@ public class InteractTransferAdapter extends ArrayAdapter<InteractTransfer> {
         }
         // Populate the data from the data object via the viewHolder object
         // into the template view.
-       // populateView(transfer, viewHolder, convertView);
-        viewHolder.email.setText(transfer.getEmail());
-        viewHolder.status.setText(transfer.getStatus());
-        viewHolder.envolope = (ImageView) convertView.findViewById(transfer.getEnvolope());
-        viewHolder.amount.setText(transfer.getAmount());
-        viewHolder.receiver.setText(transfer.getReceiver());
+        populateView(transfer, viewHolder, convertView);
         return convertView;
     }
 
     public void populateView(InteractTransfer transfer, InteractTransferAdapter.ViewHolder viewHolder, View context) {
         viewHolder.email.setText(transfer.getEmail());
         viewHolder.status.setText(transfer.getStatus());
-        viewHolder.envolope = (ImageView) context.findViewById(transfer.getEnvolope());
+        //viewHolder.envolope = (ImageView) context.findViewById(transfer.getEnvolope());
+        viewHolder.envolope.setImageResource((transfer.getEnvolope()));
         viewHolder.amount.setText(transfer.getAmount());
         viewHolder.receiver.setText(transfer.getReceiver());
     }

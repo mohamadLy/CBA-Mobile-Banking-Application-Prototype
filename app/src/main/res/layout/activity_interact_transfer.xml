@@ -55,14 +55,10 @@
                     </RelativeLayout>
                    <!-- As a divider -->
                    <View
+                       android:paddingTop="10dp"
                        android:layout_width="match_parent"
                        android:layout_height="3dp"
-                       android:background="@color/colorAccent" />
-                   <TextView
-                       android:layout_width="match_parent"
-                       android:layout_height="wrap_content"
-                       android:textSize="25dp"
-                       android:text="Nov 27, 2017"/>
+                       android:background="@color/colorPrimaryDark" />
 
                    <ListView
                        android:id="@+id/lv_interact"

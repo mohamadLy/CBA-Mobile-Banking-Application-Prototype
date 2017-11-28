@@ -12,15 +12,17 @@ public class InteractTransfer {
     private String receiver;
     private String email;
     private String amount;
+    private String date;
 
     public InteractTransfer() {}
 
-    public InteractTransfer(int imageId, String status, String receiver, String email, String amount) {
+    public InteractTransfer(int imageId, String status, String receiver, String email, String amount, String date) {
         this.imageId = imageId;
         this.status = status;
         this.receiver = receiver;
         this.email = email;
         this.amount = amount;
+        this.date = date;
     }
 
     public int getEnvolope() {
@@ -61,5 +63,13 @@ public class InteractTransfer {
 
     public void setAmount(String amount) {
         this.amount = amount;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getDate() {
+        return date;
     }
 }

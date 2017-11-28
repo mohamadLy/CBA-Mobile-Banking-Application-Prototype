@@ -3,14 +3,31 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_mail_outline_black_24dp"
+        android:textSize="25dp"
+        android:text="Nov 27, 2017"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:id="@+id/date_interact"/>
+
+    <!-- As a divider -->
+    <View
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#ffffff" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/mail_icon"
         android:layout_alignParentLeft="true"
         android:id="@+id/envolope"
         android:paddingTop="10dp"
-        android:paddingLeft="10dp"/>
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/date_interact"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +35,8 @@
         android:text="Send"
         android:layout_toRightOf="@+id/envolope"
         android:textSize="20dp"
-        android:paddingLeft="10dp"/>
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/date_interact"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,6 +61,7 @@
         android:layout_alignParentRight="true"
         android:text="$500"
         android:textSize="20dp"
-        android:layout_below="@+id/status_type"/>
+        android:layout_below="@+id/status_type"
+        android:paddingRight="10dp"/>
 
 </RelativeLayout>
