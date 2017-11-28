@@ -74,7 +74,6 @@
                    android:id="@+id/tab2"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
-                   android:background="#da8200"
                    android:orientation="vertical">
 
                    <RelativeLayout
@@ -86,13 +85,14 @@
                            android:text="View: Recent eTransfer"
                            android:gravity="center_vertical"
                            android:paddingTop="10dp"
-                           android:id="@+id/recentETransfer"/>
+                           android:id="@+id/recentETransfer2"/>
                        <ImageButton
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:src="@drawable/ic_arrow_forward_black_24dp"
                            android:layout_alignParentRight="true" />
                    </RelativeLayout>
+
                    <!-- As a divider -->
                    <View
                        android:paddingTop="10dp"
@@ -100,12 +100,11 @@
                        android:layout_height="3dp"
                        android:background="@color/colorPrimaryDark" />
 
-                   <ListView
-                       android:id="@+id/lv_interact1"
+                   <include
+                       layout="@layout/lv_interact1"
                        android:layout_width="match_parent"
-                       android:layout_height="0dp"
-                       android:layout_weight="1">
-                   </ListView>
+                       android:layout_height="match_parent">
+                   </include>
 
                </LinearLayout>
 

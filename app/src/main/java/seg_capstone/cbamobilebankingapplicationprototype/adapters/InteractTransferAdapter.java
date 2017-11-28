@@ -27,6 +27,7 @@ public class InteractTransferAdapter extends ArrayAdapter<InteractTransfer> {
         TextView receiver;
         TextView email;
         TextView amount;
+        TextView date;
     }
     public InteractTransferAdapter(@NonNull Context context, ArrayList<InteractTransfer> transfers) {
         super(context, 0, transfers);
@@ -50,6 +51,7 @@ public class InteractTransferAdapter extends ArrayAdapter<InteractTransfer> {
             viewHolder.receiver = (TextView) convertView.findViewById(R.id.destinataire_name);
             viewHolder.amount = (TextView) convertView.findViewById(R.id.money);
             viewHolder.envolope = (ImageView) convertView.findViewById(R.id.envolope);
+            viewHolder.date = (TextView) convertView.findViewById(R.id.date_interact);
             // Cache the viewHolder object inside the fresh view
             convertView.setTag(viewHolder);
         } else {
@@ -69,5 +71,6 @@ public class InteractTransferAdapter extends ArrayAdapter<InteractTransfer> {
         viewHolder.envolope.setImageResource((transfer.getEnvolope()));
         viewHolder.amount.setText(transfer.getAmount());
         viewHolder.receiver.setText(transfer.getReceiver());
+        viewHolder.date.setText(transfer.getDate());
     }
 }
