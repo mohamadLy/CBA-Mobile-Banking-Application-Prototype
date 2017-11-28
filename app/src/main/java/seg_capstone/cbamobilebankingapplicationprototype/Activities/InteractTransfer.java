@@ -18,24 +18,17 @@ public class InteractTransfer extends AppCompatActivity {
         host.setup();
 
         //Tab 1
-        TabHost.TabSpec spec = host.newTabSpec("Tab One");
+        TabHost.TabSpec spec = host.newTabSpec("Tab send");
         spec.setContent(R.id.tab1);
-        spec.setIndicator("Tab One");
+        spec.setIndicator("SEND");
         host.addTab(spec);
 
         //Tab 2
-        spec = host.newTabSpec("Tab Two");
+        spec = host.newTabSpec("Tab status");
         spec.setContent(R.id.tab2);
-        spec.setIndicator("Tab Two");
+        spec.setIndicator("STATUS");
         host.addTab(spec);
 
-        /*
-        //Tab 3
-        spec = host.newTabSpec("Tab Three");
-        spec.setContent(R.id.tab3);
-        spec.setIndicator("Tab Three");
-        host.addTab(spec);
-        */
     }
 
 }
