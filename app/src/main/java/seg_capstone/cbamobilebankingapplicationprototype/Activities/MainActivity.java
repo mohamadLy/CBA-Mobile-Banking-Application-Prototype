@@ -1,10 +1,6 @@
 package seg_capstone.cbamobilebankingapplicationprototype.Activities;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,12 +10,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import seg_capstone.cbamobilebankingapplicationprototype.DataProvider;
+import seg_capstone.cbamobilebankingapplicationprototype.bills.Bill;
+import seg_capstone.cbamobilebankingapplicationprototype.dataProvider.AccountProvider;
 import seg_capstone.cbamobilebankingapplicationprototype.R;
 import seg_capstone.cbamobilebankingapplicationprototype.account.Account;
 import seg_capstone.cbamobilebankingapplicationprototype.adapters.AccountAdapter;
@@ -46,9 +42,9 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         ListView listView = (ListView) findViewById(R.id.content);
-        DataProvider dataProvider = new DataProvider();
-        dataProvider.feedData();
-        ArrayList<Account> accounts = dataProvider.getAccounts();
+        AccountProvider AccountProvider = new AccountProvider();
+        AccountProvider.feedData();
+        ArrayList<Account> accounts = AccountProvider.getAccounts();
         //AccountAdapter accountAdapter = new AccountAdapter(this, accounts);
         AccountAdapter accountAdapter = new AccountAdapter(this, accounts);
         listView.setAdapter(accountAdapter);
@@ -93,9 +89,10 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        Intent intent;
         if (id == R.id.nav_bill_payments) {
-            // Handle the camera action
+            intent = new Intent(this, Bills.class);
+            startActivity(intent);
         } else if (id == R.id.nav_cba_website) {
 
         } else if (id == R.id.nav_eDeposit) {
