@@ -1,4 +1,4 @@
-package seg_capstone.cbamobilebankingapplicationprototype.adapters;
+package seg_capstone.cbamobilebankingapplicationprototype.Adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
