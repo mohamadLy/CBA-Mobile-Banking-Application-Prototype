@@ -25,6 +25,7 @@ import seg_capstone.cbamobilebankingapplicationprototype.Classes.ExpandListGroup
 import seg_capstone.cbamobilebankingapplicationprototype.DataProviders.DataProvider;
 import seg_capstone.cbamobilebankingapplicationprototype.R;
 
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //toolbar.setLogo(R.mipmap.ic_icon);
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         
@@ -96,17 +97,23 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        Intent intent;
         if (id == R.id.nav_bill_payments) {
-            // Handle the camera action
-        } else if (id == R.id.nav_eDeposit) {
+            intent = new Intent(this, Bills.class);
+            startActivity(intent);
+        }
+
+         else if (id == R.id.nav_eDeposit) {
+            intent = new Intent(this, EDeposit.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_explore_product) {
 
         } else if (id == R.id.nav_my_account) {
 
         } else if (id == R.id.nav_interact_e_transfer) {
-
+            intent = new Intent(this, InteractTransfer.class);
+            startActivity(intent);
         } else if (id == R.id.nav_upcoming_transaction) {
 
         }

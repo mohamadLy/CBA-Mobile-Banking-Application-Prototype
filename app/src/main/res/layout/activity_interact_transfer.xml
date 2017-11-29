@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="seg_capstone.cbamobilebankingapplicationprototype.Activities.InteractTransfer">
+
+   <TabHost
+       android:id="@+id/tab_host"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+           <TabWidget
+               android:id="@android:id/tabs"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+           </TabWidget>
+
+           <FrameLayout
+               android:id="@android:id/tabcontent"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginTop="10dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp">
+
+               <!-- Tab send -->
+               <LinearLayout
+                   android:id="@+id/tab1"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View: Recent eTransfer"
+                            android:gravity="center_vertical"
+                            android:paddingTop="10dp"
+                            android:id="@+id/recentETransfer"/>
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_arrow_forward_black_24dp"
+                            android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                   <!-- As a divider -->
+                   <View
+                       android:paddingTop="10dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="3dp"
+                       android:background="@color/colorPrimaryDark" />
+
+                   <ListView
+                       android:id="@+id/lv_interact"
+                       android:layout_width="match_parent"
+                       android:layout_height="0dp"
+                       android:layout_weight="1">
+                   </ListView>
+
+               </LinearLayout>
+
+               <!-- Status tab -->
+               <LinearLayout
+                   android:id="@+id/tab2"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical">
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="View: Recent eTransfer"
+                           android:gravity="center_vertical"
+                           android:paddingTop="10dp"
+                           android:id="@+id/recentETransfer2"/>
+                       <ImageButton
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:src="@drawable/ic_arrow_forward_black_24dp"
+                           android:layout_alignParentRight="true" />
+                   </RelativeLayout>
+
+                   <!-- As a divider -->
+                   <View
+                       android:paddingTop="10dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="3dp"
+                       android:background="@color/colorPrimaryDark" />
+
+                   <include
+                       layout="@layout/lv_interact1"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent">
+                   </include>
+
+               </LinearLayout>
+
+           </FrameLayout>
+       </LinearLayout>
+   </TabHost>
+
+
+</LinearLayout>
