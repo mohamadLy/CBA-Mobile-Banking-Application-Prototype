@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="Nov 27, 2017"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:id="@+id/date_interact"/>
+
+    <!-- As a divider -->
+    <View
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#ffffff" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_cancel_black_24dp"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/envolope"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/date_interact"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/status_type"
+        android:text="Cancelled"
+        android:layout_toRightOf="@+id/envolope"
+        android:textSize="20dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/date_interact"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/destinataire_name"
+        android:layout_below="@+id/status_type"
+        android:text="Moe"
+        android:textSize="20dp"
+        android:layout_toRightOf="@+id/envolope"
+        android:paddingLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:layout_below="@+id/destinataire_name"
+        android:text="moe@gmail.com"
+        android:layout_toRightOf="@+id/envolope"
+        android:paddingLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/money"
+        android:layout_alignParentRight="true"
+        android:text="$800"
+        android:textSize="20dp"
+        android:layout_below="@+id/status_type"
+        android:paddingRight="10dp"/>
+</RelativeLayout>
