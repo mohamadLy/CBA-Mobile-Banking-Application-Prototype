@@ -40,4 +40,5 @@ public class Account {
     public void setBalance(String balance) {
         this.balance = balance;
     }
+    public void test() {}
 }

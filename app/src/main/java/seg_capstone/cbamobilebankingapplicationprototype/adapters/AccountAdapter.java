@@ -62,4 +62,5 @@ public class AccountAdapter extends ArrayAdapter<Account> {
         viewHolder.balance.setText(account.getBalance());
         viewHolder.type.setText(account.getType() + "  ");
     }
+    public void test() {}
 }
