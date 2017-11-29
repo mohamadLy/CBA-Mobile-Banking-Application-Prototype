@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#e0f2f1">
 
     <!-- Login progress -->
     <ProgressBar
@@ -17,20 +17,21 @@
         android:visibility="gone"
         android:layout_centerInParent="true" />
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:id="@+id/login_form"
         android:layout_below="@+id/login_progress">
         <ImageView
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_weight="1"
-            android:layout_marginTop="4dp"
             android:contentDescription="@string/cbalogo"
-            android:src="@drawable/cba_logo"
+            android:padding="50dp"
+            android:src="@drawable/cba_logo_2"
             android:id="@+id/cbaLogo"/>
 
         <LinearLayout
@@ -42,16 +43,6 @@
             android:orientation="vertical"
             android:paddingBottom="@dimen/log_in_layout_padding"
             android:layout_below="@+id/cbaLogo">
-
-            <TextView
-                android:id="@+id/txtError"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:paddingLeft="@dimen/log_in_layout_padding"
-                android:paddingRight="@dimen/log_in_layout_padding"
-                android:visibility="gone"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -68,31 +59,26 @@
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
 
                         <AutoCompleteTextView
                             android:id="@+id/email"
                             android:inputType="textEmailAddress"
                             android:singleLine="true"
-                            style="@style/log_in_editText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_gravity="center_vertical"
                             android:backgroundTint="@android:color/transparent"
                             android:hint="@string/log_in_client_card_or_username"
                             android:maxLines="1"
-                            android:nextFocusDown="@+id/passwordEditText"
-                            android:nextFocusRight="@+id/storedCardButton"/>
+                            android:nextFocusForward="@+id/passwordEditText"
+                            android:nextFocusDown="@id/passwordEditText"
+                            android:nextFocusRight="@id/passwordEditText"
+                            android:imeOptions="actionNext"/>
 
                     </android.support.design.widget.TextInputLayout>
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/dropdown_arrow" />
                 </LinearLayout>
 
                 <View style="@style/GreySeparatorLine" />
@@ -111,22 +97,17 @@
                         android:layout_height="wrap_content">
 
                         <EditText
-                            android:imeActionId="6"
-                            android:imeActionLabel="@string/action_sign_in_short"
-                            android:imeOptions="actionUnspecified"
+                            android:imeOptions="actionDone"
                             android:inputType="textPassword"
                             android:maxLines="1"
                             android:singleLine="true"
                             android:id="@+id/passwordEditText"
-                            style="@style/log_in_editText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:layout_gravity="center_vertical"
                             android:backgroundTint="@android:color/transparent"
-                            android:hint="@string/log_in_password"
-                            android:nextFocusDown="@+id/rememberMeCheckbox"
-                            android:nextFocusUp="@+id/usernameEditText" />
+                            android:hint="@string/log_in_password"/>
 
                     </android.support.design.widget.TextInputLayout>
 
@@ -165,14 +146,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:nextFocusUp="@+id/rememberMeSwitch"
-                android:text="SIGN IN" />
+                android:text="SIGN IN"
+                android:textSize="15dp"
+                android:padding="15dp"
+                android:backgroundTint="@color/primaryLightColor"/>
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="10dp"
-                app:srcCompat="?android:attr/fingerprintAuthDrawable" />
+                app:srcCompat="?android:attr/fingerprintAuthDrawable"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -182,8 +166,9 @@
                 android:textAllCaps="false"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:textColor="@color/primaryColor"/>
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 
 </RelativeLayout>

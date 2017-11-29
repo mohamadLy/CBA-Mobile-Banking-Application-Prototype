@@ -9,12 +9,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/cba_logo"
+        android:icon="@mipmap/ic_icon"
         android:label="@string/app_name"
-        android:logo="@drawable/cba_logo"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:logo="@mipmap/ic_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".Activities.LoginActivity"
             android:label="@string/app_name"
@@ -25,16 +25,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Activities.MainActivity"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="android.intent.action.MAIN"></action>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Activities.SettingsActivity"
             android:label="@string/title_activity_settings" />
@@ -43,9 +44,10 @@
             android:label="Bill Payment" />
         <activity
             android:name=".Activities.EDeposit"
-            android:label="eDeposit" />
-        <activity android:name=".Activities.InteractTransfer" />
+            android:label="eDeposit"></activity>
+        <activity android:name=".Activities.InteractTransfer"></activity>
         <activity android:name=".Activities.AccountActivity"></activity>
+
     </application>
 
 </manifest>

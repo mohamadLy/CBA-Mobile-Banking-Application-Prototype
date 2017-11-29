@@ -6,6 +6,6 @@
     android:layout_height="match_parent"
     tools:context="seg_capstone.cbamobilebankingapplicationprototype.Activities.AccountActivity">
 
-    <include layout="@layout/content_main" />
+    <include layout="@layout/content" />
 
 </android.support.constraint.ConstraintLayout>

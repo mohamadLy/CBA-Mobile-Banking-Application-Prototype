@@ -1,4 +1,4 @@
-package seg_capstone.cbamobilebankingapplicationprototype.dataProvider;
+package seg_capstone.cbamobilebankingapplicationprototype.DataProviders;
 
 import android.content.Context;
 

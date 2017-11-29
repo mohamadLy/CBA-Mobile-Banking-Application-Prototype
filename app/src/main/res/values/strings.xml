@@ -16,7 +16,7 @@
     <string name="title_item_list">Items</string>
     <string name="title_item_detail">Item Detail</string>
     <string name="cbalogo">cbaLogo</string>
-    <string name="log_in_client_card_or_username">Username or Card Number</string>
+    <string name="log_in_client_card_or_username">Email or Card Number</string>
     <string name="log_in_password">Password</string>
     <string name="title_activity_login22">Sign in1</string>
     <string name="title_activity_main">MainActivity</string>
@@ -98,7 +98,6 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
-
     <string name="account_prompt">Deposit to</string>
 
     <string-array name="accounts_arrays">

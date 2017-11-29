@@ -7,9 +7,9 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import seg_capstone.cbamobilebankingapplicationprototype.R;
-import seg_capstone.cbamobilebankingapplicationprototype.account.Account;
-import seg_capstone.cbamobilebankingapplicationprototype.adapters.AccountAdapter;
-import seg_capstone.cbamobilebankingapplicationprototype.dataProvider.AccountProvider;
+import seg_capstone.cbamobilebankingapplicationprototype.Account.Account;
+import seg_capstone.cbamobilebankingapplicationprototype.Adapters.AccountAdapter;
+import seg_capstone.cbamobilebankingapplicationprototype.DataProviders.AccountProvider;
 
 public class AccountActivity extends AppCompatActivity {
 

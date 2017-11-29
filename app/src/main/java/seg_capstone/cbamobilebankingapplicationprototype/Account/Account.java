@@ -1,4 +1,4 @@
-package seg_capstone.cbamobilebankingapplicationprototype.account;
+package seg_capstone.cbamobilebankingapplicationprototype.Account;
 
 /**
  * Created by mohamadou on 2017-11-23.

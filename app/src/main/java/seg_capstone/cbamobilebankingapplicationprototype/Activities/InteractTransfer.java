@@ -1,16 +1,13 @@
 package seg_capstone.cbamobilebankingapplicationprototype.Activities;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TabHost;
 
 import seg_capstone.cbamobilebankingapplicationprototype.R;
-import seg_capstone.cbamobilebankingapplicationprototype.adapters.InteractTransferAdapter;
-import seg_capstone.cbamobilebankingapplicationprototype.dataProvider.InteractProvider;
+import seg_capstone.cbamobilebankingapplicationprototype.Adapters.InteractTransferAdapter;
+import seg_capstone.cbamobilebankingapplicationprototype.DataProviders.InteractProvider;
 
 public class InteractTransfer extends AppCompatActivity implements TabHost.OnTabChangeListener {
 

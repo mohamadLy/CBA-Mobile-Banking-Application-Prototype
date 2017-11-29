@@ -2,12 +2,9 @@ package seg_capstone.cbamobilebankingapplicationprototype.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ListView;
 import android.widget.TabHost;
 
 import seg_capstone.cbamobilebankingapplicationprototype.R;
-import seg_capstone.cbamobilebankingapplicationprototype.adapters.InteractTransferAdapter;
-import seg_capstone.cbamobilebankingapplicationprototype.dataProvider.InteractProvider;
 
 public class Bills extends AppCompatActivity {
 
