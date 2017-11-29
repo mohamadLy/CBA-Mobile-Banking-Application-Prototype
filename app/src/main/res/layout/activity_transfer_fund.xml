@@ -4,14 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="seg_capstone.cbamobilebankingapplicationprototype.Activities.AccountActivity">
+    tools:context="seg_capstone.cbamobilebankingapplicationprototype.Activities.TransferFundActivity">
 
-    <ExpandableListView
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/mainScreenList"
-        android:drawSelectorOnTop="true">
-
-    </ExpandableListView>
-
+        android:layout_height="wrap_content"
+        android:text="Sorry not implemented yet"
+        android:textSize="25dp"/>
 </android.support.constraint.ConstraintLayout>

@@ -63,6 +63,21 @@ public final class DataProvider {
         return items;
     }
 
+    public static ArrayList<ExpandListGroup> getTransactionroups(){
+        ArrayList<ExpandListGroup> groups = new ArrayList<ExpandListGroup>();
+        ExpandListGroup recentTransactions = getRecentTransactionsGroup();
+
+        groups.add(recentTransactions);
+        return groups;
+    }
+
+    public static ArrayList<ExpandListGroup> getAccountGroups(){
+        ArrayList<ExpandListGroup> groups = new ArrayList<ExpandListGroup>();
+        ExpandListGroup accountOverview = getAccountOverviewGroup();
+        groups.add(accountOverview);
+        return groups;
+    }
+
     /*public void feedData() {
         // Deposit Accounts
         ExpandListItem deposit = new ExpandListItem("Deposit Accounts", "", "3 ACCOUNTS");

@@ -2,6 +2,7 @@ package seg_capstone.cbamobilebankingapplicationprototype.Activities;
 
 import android.content.Intent;
 import android.graphics.PixelFormat;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,7 +15,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.MeasureSpec;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ExpandableListView;
+import android.widget.ImageButton;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
@@ -24,10 +27,15 @@ import seg_capstone.cbamobilebankingapplicationprototype.Adapters.ExpandListAdap
 import seg_capstone.cbamobilebankingapplicationprototype.Classes.ExpandListGroup;
 import seg_capstone.cbamobilebankingapplicationprototype.DataProviders.DataProvider;
 import seg_capstone.cbamobilebankingapplicationprototype.R;
+import seg_capstone.cbamobilebankingapplicationprototype.bills.Bill;
 
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    public ImageButton paymentButton;
+    public ImageButton transferButton;
+    public ImageButton statementButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +64,35 @@ public class MainActivity extends AppCompatActivity
         ArrayList<ExpandListGroup> groups = DataProvider.getMainScreenGroups();
         ExpandListAdapter expandListAdapter = new ExpandListAdapter(this, groups);
         mainScreenList.setAdapter(expandListAdapter);
+
+        // setup lister for the main use case
+        paymentButton = (ImageButton) findViewById(R.id.paymentsButton);
+        paymentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Bills.class);
+                startActivity(intent);
+            }
+        });
+
+        transferButton = (ImageButton) findViewById(R.id.transferFundsButton);
+        transferButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, TransferFundActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        statementButton = (ImageButton) findViewById(R.id.statementsButton);
+        statementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, StatementActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
