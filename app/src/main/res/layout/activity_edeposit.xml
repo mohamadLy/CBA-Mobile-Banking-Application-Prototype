@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="seg_capstone.cbamobilebankingapplicationprototype.Activities.EDeposit"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cheque Details"
+        android:textSize="25dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mobile_deposit_image"/>
+
+   <TextView
+       android:paddingTop="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Amount"
+       android:textSize="20dp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="$0.00" />
+    <!-- As a divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent" />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/account_prompt"
+        android:entries="@array/accounts_arrays">
+    </Spinner>
+
+</LinearLayout>
