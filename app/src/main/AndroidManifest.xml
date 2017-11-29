@@ -40,11 +40,12 @@
             android:label="@string/title_activity_settings" />
         <activity
             android:name=".Activities.Bills"
-            android:label="Bill Payment"></activity>
+            android:label="Bill Payment" />
         <activity
             android:name=".Activities.EDeposit"
-            android:label="eDeposit"></activity>
-        <activity android:name=".Activities.InteractTransfer"></activity>
+            android:label="eDeposit" />
+        <activity android:name=".Activities.InteractTransfer" />
+        <activity android:name=".Activities.AccountActivity"></activity>
     </application>
 
 </manifest>
