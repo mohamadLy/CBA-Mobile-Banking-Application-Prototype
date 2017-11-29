@@ -25,6 +25,7 @@ public class AccountAdapter extends ArrayAdapter<Account> {
         TextView accountNumbber;
         TextView balance;
     }
+
     public AccountAdapter(@NonNull Context context, ArrayList<Account> accountArrayAdapter) {
         super(context, 0, accountArrayAdapter);
     }
@@ -37,7 +38,7 @@ public class AccountAdapter extends ArrayAdapter<Account> {
         Account account = getItem(position);
         // Check if an existing view is being reused, otherwise inflate the view
         ViewHolder viewHolder;
-        if(convertView == null) {
+        if (convertView == null) {
             // If there's no view to re-use, inflate a brand new view for row
             viewHolder = new ViewHolder();
             LayoutInflater intentFilter = LayoutInflater.from(getContext());
@@ -62,5 +63,7 @@ public class AccountAdapter extends ArrayAdapter<Account> {
         viewHolder.balance.setText(account.getBalance());
         viewHolder.type.setText(account.getType() + "  ");
     }
-    public void test() {}
+
+    public void test() {
+    }
 }
