@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="primaryColor">#00897b</color>
+    <color name="primaryLightColor">#4ebaaa</color>
+    <color name="primaryDarkColor">#005b4f</color>
+    <color name="secondaryColor">#1de9b6</color>
+    <color name="secondaryLightColor">#6effe8</color>
+    <color name="secondaryDarkColor">#00b686</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#000000</color>
+    <color name="lightTealColor">#e0f2f1</color>
+    <color name="greyTealColor">#eceff1</color>
+    <color name="darkGreenColor">#008a66</color>
 
-    <color name="colorPrimary">#A7226E</color>
-    <color name="colorPrimaryDark">#EC2049</color>
-    <color name="secondPrimary">#F26B38</color>
-    <color name="thirdPrimary">#F7DB4F</color>
-    <color name="fourth_primary">#2F9599</color>
-    <color name="colorAccent">#FF4081</color>
     <color name="grey_separator_line">#cacaca</color>
     <color name="editText_textColor">#666666</color>
     <color name="editText_textColorHint">#6f6f6f</color>
+    <color name="negativeTransactionColor">#d50000</color>
+    <color name="positiveTransactionColor">@color/secondaryDarkColor</color>
     <!--
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>

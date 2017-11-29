@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:id="@+id/nav_main_group">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
         <item
             android:id="@+id/nav_my_account"
-            android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+            android:icon="@drawable/ic_payment_black_24dp"
             android:title="My Accounts" />
         <item
             android:id="@+id/nav_bill_payments"
@@ -23,24 +29,37 @@
         <item
             android:id="@+id/nav_eDeposit"
             android:icon="@drawable/ic_menu_camera"
-            android:title="eDeposit" />
+            android:title="Deposit Cheque" />
 
         <item
             android:id="@+id/nav_global_money_tranfer"
             android:icon="@drawable/ic_trending_up_black_24dp"
             android:title="Global Money Transfer" />
     </group>
-    <group>
-        <menu>
-            <item
-                android:id="@+id/nav_explore_product"
-                android:icon="@drawable/ic_add_shopping_cart_black_24dp"
-                android:title="Explore product" />
-            <item
-                android:id="@+id/nav_cba_website"
-                android:icon="@drawable/ic_apps_black_24dp"
-                android:title="CBA website" />
-        </menu>
+
+    <group
+        android:id="@+id/nav_other_group"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Settings" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help_black_24dp"
+            android:title="Help" />
+        <item
+            android:id="@+id/nav_explore_product"
+            android:icon="@drawable/ic_add_shopping_cart_black_24dp"
+            android:title="Explore product" />
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/ic_phone_black_24dp"
+            android:title="Contact Us" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="About CBA Mobile App" />
     </group>
 
 
