@@ -42,9 +42,34 @@ public final class DataProvider {
         return items;
     }
 
+    private static ArrayList<ExpandListItem> getAllAccountsItems() {
+        ArrayList<ExpandListItem> items = new ArrayList<ExpandListItem>();
+
+        ExpandListItem chequingAccount = new ExpandListItem("CHEQUING", "(987-1234)", "$507.89");
+        items.add(chequingAccount);
+
+        ExpandListItem savingsAccount = new ExpandListItem("SAVINGS", "(987-5678)", "$1304.18");
+        items.add(savingsAccount);
+
+        ExpandListItem creditLine = new ExpandListItem("CREDIT LINE", "(456-765432)", "$2194.07");
+        items.add(creditLine);
+
+        items.add(new ExpandListItem("Investment", "(123-789456)", "$1500"));
+        items.add(new ExpandListItem("Mortgage", "(123-456123)", "$112000"));
+
+        return items;
+    }
+
     private static ExpandListGroup getAccountOverviewGroup() {
         ExpandListGroup grp = new ExpandListGroup("Account Overview");
         ArrayList<ExpandListItem> items = getAccountOverviewItems();
+        grp.setItems(items);
+        return grp;
+    }
+
+    private static ExpandListGroup getAllAccountsGroup() {
+        ExpandListGroup grp = new ExpandListGroup("Account Overview");
+        ArrayList<ExpandListItem> items = getAllAccountsItems();
         grp.setItems(items);
         return grp;
     }
@@ -53,17 +78,17 @@ public final class DataProvider {
         ArrayList<ExpandListItem> items = new ArrayList<ExpandListItem>();
 
         items.add(new ExpandListItem("McDonald", "chequing - 2017/11/27", "- $13.65"));
-        items.add(new ExpandListItem("McDonald", "chequing - 2017/11/27", "$13.65"));
-        items.add(new ExpandListItem("McDonald", "chequing - 2017/11/27", "$13.65"));
-        items.add(new ExpandListItem("McDonald", "chequing - 2017/11/27", "- $13.65"));
-        items.add(new ExpandListItem("McDonald", "chequing - 2017/11/27", "$13.65"));
-        items.add(new ExpandListItem("McDonald", "chequing - 2017/11/27", "- $13.65"));
-        items.add(new ExpandListItem("McDonald", "chequing - 2017/11/27", "- $13.65"));
-        items.add(new ExpandListItem("McDonald", "chequing - 2017/11/27", "$13.65"));
+        items.add(new ExpandListItem("eDeposit", "savings - 2017/11/26", "$200.00"));
+        items.add(new ExpandListItem("Withdrawal", "chequing - 2017/11/26", "- $80.00"));
+        items.add(new ExpandListItem("Credit Card Payement", "chequing - 2017/11/26", "$100.00"));
+        items.add(new ExpandListItem("Transfer to Jane Doe", "chequing - 2017/11/26", "- $50.00"));
+        items.add(new ExpandListItem("McDonald", "chequing - 2017/11/25", "- $13.65"));
+        items.add(new ExpandListItem("McDonald", "chequing - 2017/11/25", "- $7.89"));
+        items.add(new ExpandListItem("Payroll Deposit", "chequing - 2017/11/25", "$2612.49"));
         return items;
     }
 
-    public static ArrayList<ExpandListGroup> getTransactionroups(){
+    public static ArrayList<ExpandListGroup> getTransactionGroups(){
         ArrayList<ExpandListGroup> groups = new ArrayList<ExpandListGroup>();
         ExpandListGroup recentTransactions = getRecentTransactionsGroup();
 
@@ -73,10 +98,11 @@ public final class DataProvider {
 
     public static ArrayList<ExpandListGroup> getAccountGroups(){
         ArrayList<ExpandListGroup> groups = new ArrayList<ExpandListGroup>();
-        ExpandListGroup accountOverview = getAccountOverviewGroup();
+        ExpandListGroup accountOverview = getAllAccountsGroup();
         groups.add(accountOverview);
         return groups;
     }
+
 
     /*public void feedData() {
         // Deposit Accounts

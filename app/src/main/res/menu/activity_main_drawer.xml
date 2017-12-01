@@ -35,6 +35,11 @@
             android:id="@+id/nav_global_money_tranfer"
             android:icon="@drawable/ic_trending_up_black_24dp"
             android:title="Global Money Transfer" />
+
+        <item
+            android:id="@+id/nav_manage_payees"
+            android:icon="@drawable/ic_contacts_black_24dp"
+            android:title="Manage Payees" />
     </group>
 
     <group

@@ -2,7 +2,6 @@ package seg_capstone.cbamobilebankingapplicationprototype.Activities;
 
 import android.content.Intent;
 import android.graphics.PixelFormat;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,7 +14,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.MeasureSpec;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 import android.widget.ListAdapter;
@@ -27,7 +25,6 @@ import seg_capstone.cbamobilebankingapplicationprototype.Adapters.ExpandListAdap
 import seg_capstone.cbamobilebankingapplicationprototype.Classes.ExpandListGroup;
 import seg_capstone.cbamobilebankingapplicationprototype.DataProviders.DataProvider;
 import seg_capstone.cbamobilebankingapplicationprototype.R;
-import seg_capstone.cbamobilebankingapplicationprototype.bills.Bill;
 
 
 public class MainActivity extends AppCompatActivity
@@ -64,6 +61,8 @@ public class MainActivity extends AppCompatActivity
         ArrayList<ExpandListGroup> groups = DataProvider.getMainScreenGroups();
         ExpandListAdapter expandListAdapter = new ExpandListAdapter(this, groups);
         mainScreenList.setAdapter(expandListAdapter);
+        mainScreenList.expandGroup(0);
+        mainScreenList.expandGroup(1);
 
         // setup lister for the main use case
         paymentButton = (ImageButton) findViewById(R.id.paymentsButton);
@@ -108,8 +107,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+        //getMenuInflater().inflate(R.menu.main, menu);
+        return false;
     }
 
     @Override
@@ -154,6 +153,9 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.nav_upcoming_transaction) {
 
+        } else if (id == R.id.nav_settings) {
+            intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

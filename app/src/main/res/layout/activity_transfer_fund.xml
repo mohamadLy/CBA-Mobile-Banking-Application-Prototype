@@ -1,14 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="seg_capstone.cbamobilebankingapplicationprototype.Activities.TransferFundActivity">
+    tools:context="seg_capstone.cbamobilebankingapplicationprototype.Activities.Bills"
+    android:orientation="vertical"
+    android:padding="10dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sorry not implemented yet"
-        android:textSize="25dp"/>
-</android.support.constraint.ConstraintLayout>
+        android:text="From"
+        style="@style/InputLabel" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/account_prompt"
+        android:entries="@array/accounts_arrays">
+    </Spinner>
+
+    <View style="@style/GreySeparatorLine"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To"
+        style="@style/InputLabel" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/accounts_arrays">
+    </Spinner>
+
+    <View style="@style/GreySeparatorLine"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:theme="@style/textInput">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            android:backgroundTint="@android:color/transparent"
+            android:maxLines="1"
+            android:singleLine="true"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <View style="@style/GreySeparatorLine"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="When"
+        style="@style/InputLabel" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/dates_arrays">
+    </Spinner>
+
+    <View style="@style/GreySeparatorLine"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Frequency"
+        style="@style/InputLabel" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/frequency_arrays">
+    </Spinner>
+
+    <View style="@style/GreySeparatorLine"/>
+
+    <Button
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textSize="15dp"
+        android:padding="17dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/primaryLightColor"/>
+
+
+</LinearLayout>

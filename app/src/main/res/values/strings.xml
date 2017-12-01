@@ -98,13 +98,49 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
-    <string name="account_prompt">Deposit to</string>
+    <string name="account_prompt">Deposit Into</string>
 
     <string-array name="accounts_arrays">
-        <item>Checking</item>
+        <item>Chequing</item>
         <item>Savings</item>
-        <item>Investment</item>
         <item>Credit Card</item>
     </string-array>
+
+    <string-array name="entries_list_preference">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+        <item>Entry 4</item>
+    </string-array>
+
+    <string-array name="entryvalues_list_preference">
+        <item>Value 1</item>
+        <item>Value 2</item>
+        <item>Value 3</item>
+        <item>Value 4</item>
+    </string-array>
+
+    <string-array name="dates_arrays">
+        <item>Dec 01, 2017</item>
+        <item>Dec 02, 2017</item>
+        <item>Dec 03, 2017</item>
+        <item>Dec 04, 2017</item>
+    </string-array>
+
+    <string-array name="frequency_arrays">
+        <item>Once</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Annually</item>
+    </string-array>
+
+    <string-array name="payees_arrays">
+        <item>uOttawa - 1234567</item>
+        <item>Hydro Quebec</item>
+        <item>Best Buy Financing</item>
+        <item>Kia Ottawa</item>
+    </string-array>
+    
+    
 
 </resources>

@@ -19,9 +19,10 @@ public class StatementActivity extends AppCompatActivity {
         setContentView(R.layout.activity_statement);
 
         ExpandableListView mainScreenList = (ExpandableListView) findViewById(R.id.mainScreenList);
-        ArrayList<ExpandListGroup> groups = DataProvider.getTransactionroups();
+        ArrayList<ExpandListGroup> groups = DataProvider.getTransactionGroups();
         ExpandListAdapter expandListAdapter = new ExpandListAdapter(this, groups);
         mainScreenList.setAdapter(expandListAdapter);
+        mainScreenList.expandGroup(0);
 
     }
 }

@@ -9,37 +9,111 @@
     android:padding="10dp">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cheque Details"
-        android:textSize="25dp"
-        android:layout_gravity="center_vertical"
-        android:gravity="center" />
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/mobile_deposit_image"/>
-
-   <TextView
-       android:paddingTop="10dp"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="Amount"
-       android:textSize="20dp"/>
-    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="$0.00" />
-    <!-- As a divider -->
-    <View
+        android:text="Front of Cheque :"
+        android:textSize="15dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:focusedByDefault="true"/>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorAccent" />
+        android:layout_height="0dp"
+        android:layout_weight="0.45"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/greyTealColor"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_menu_camera" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back of Cheque :"
+        android:textSize="15dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.45"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/greyTealColor"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_menu_camera" />
+    </FrameLayout>
+
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/textInput">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            android:backgroundTint="@android:color/transparent"
+            android:maxLines="1"
+            android:singleLine="true"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <View style="@style/GreySeparatorLine"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deposit Into"
+        android:layout_marginTop="20dp"
+        style="@style/InputLabel" />
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:prompt="@string/account_prompt"
         android:entries="@array/accounts_arrays">
     </Spinner>
+
+    <View style="@style/GreySeparatorLine"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"/>
+
+    <Button
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textSize="15dp"
+        android:padding="17dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/primaryLightColor"/>
 
 </LinearLayout>
