@@ -13,21 +13,6 @@ public class Bills extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bills);
-        TabHost host = (TabHost)findViewById(R.id.tabHost);
-        host.setup();
-
-
-        //Tab 1
-        TabHost.TabSpec spec = host.newTabSpec("Tab cancel");
-        spec.setContent(R.id.next);
-        spec.setIndicator("CANCEL");
-        host.addTab(spec);
-
-        //Tab 2
-        spec = host.newTabSpec("Tab next");
-        spec.setContent(R.id.cancelled);
-        spec.setIndicator("NEXT");
-        host.addTab(spec);
 
     }
 }

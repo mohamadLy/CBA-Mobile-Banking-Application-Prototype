@@ -77,6 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Amount"
+            android:inputType="numberDecimal"
             android:backgroundTint="@android:color/transparent"
             android:maxLines="1"
             android:singleLine="true"/>
@@ -85,12 +86,15 @@
 
     <View style="@style/GreySeparatorLine"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deposit Into"
+        android:layout_marginTop="20dp"
+        style="@style/InputLabel" />
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
         android:prompt="@string/account_prompt"
         android:entries="@array/accounts_arrays">
     </Spinner>
